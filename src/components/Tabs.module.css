@@ -1,0 +1,26 @@
+.tab {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  background: var(--background);
+  border: 0;
+  padding: 0;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.tab {
+  margin-right: 32px;
+  padding: 12px 0;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+  color: var(--text-muted);
+}
+
+.tab[aria-selected="true"] {
+  border-bottom-color: var(--text);
+  color: var(--text);
+}

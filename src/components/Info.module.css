@@ -1,0 +1,18 @@
+.label {
+  font-family: var(--font-family);
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.list {
+  list-style: disc;
+  list-style-position: inside;
+}
+
+.listItem + .listItem {
+  margin-top: 8px;
+}

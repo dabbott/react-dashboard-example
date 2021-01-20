@@ -1,0 +1,7 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  max-width: 1180px;
+  margin: 0px auto;
+  padding: 24px;
+}

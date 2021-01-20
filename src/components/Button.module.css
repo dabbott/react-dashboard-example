@@ -1,0 +1,15 @@
+.button {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 12px 16px;
+  border: 1px solid var(--divider);
+  color: var(--text);
+  background-color: var(--background);
+  width: auto;
+  font-size: 1.6rem;
+  font-weight: 500;
+}

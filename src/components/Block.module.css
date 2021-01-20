@@ -1,0 +1,9 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: 32px;
+  border: 1px solid var(--divider);
+  border-radius: 6px;
+  box-shadow: rgba(17, 51, 83, 0.02) 0px 4px 12px 0px;
+}
