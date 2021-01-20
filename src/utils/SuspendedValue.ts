@@ -14,7 +14,7 @@ export class SuspendedValue<T> {
       });
   }
 
-  get unwrappedValue(): T {
+  getValueOrThrow(): T {
     switch (this.promiseState.type) {
       case "pending":
         throw this.suspendedPromise;

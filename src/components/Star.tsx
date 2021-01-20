@@ -14,6 +14,8 @@ export default function Star({ size = 24, fill, stroke = "black" }: Props) {
         stroke,
         width: `${size}px`,
         height: `${size * (23 / 24)}px`,
+        flexGrow: 0,
+        flexShrink: 0,
       }}
       viewBox="0 0 24 23"
       preserveAspectRatio="xMidYMid meet"

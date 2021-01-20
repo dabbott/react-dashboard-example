@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import fetchData from "../utils/fetchData";
+import fetchJSON from "../utils/fetchJSON";
 import { PromiseState } from "../utils/PromiseState";
 
 export default function useFetch<T>(url: string): PromiseState<T> {
@@ -10,7 +10,7 @@ export default function useFetch<T>(url: string): PromiseState<T> {
 
     async function getInfo() {
       try {
-        const data = await fetchData<T>(url);
+        const data = await fetchJSON<T>(url);
 
         if (isStale) return;
 

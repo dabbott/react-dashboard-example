@@ -17,16 +17,16 @@ export default function Article({
   author,
   formattedDate,
   url,
-  image
+  image,
 }: Props) {
   return (
-    <a className="row" href={url}>
-      <div className="column">
+    <a className={styles.article} href={url}>
+      <div className={styles.content}>
         <h3>{title}</h3>
         <VerticalSpacer size={8} />
         <p>{summary}</p>
         <VerticalSpacer size={8} />
-        <p className="row">
+        <p className={styles.details}>
           {author}
           <HorizontalSpacer size={24} />
           {formattedDate}

@@ -84,8 +84,8 @@ export default function App() {
   return (
     <ErrorBoundary fallback={<span>Error!</span>}>
       <ThemeContext.Provider value={theme}>
-        <main className={styles.content}>
-          <div className="row">
+        <main className={styles.container}>
+          <header className={styles.header}>
             <h1>Bitcoin</h1>
             <HorizontalSpacer></HorizontalSpacer>
             <Button
@@ -100,7 +100,7 @@ export default function App() {
               activeTitle="Watch"
               inactiveTitle="Unwatch"
             ></StarButton>
-          </div>
+          </header>
           <Tabs
             tabs={[
               { title: "Overview", content: <Overview /> },

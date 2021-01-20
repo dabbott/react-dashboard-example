@@ -15,7 +15,7 @@ function Convert({ title, exchangeRate }: ConvertProps) {
   const { amount, displayAmount, setAmount } = useConvertedValue(exchangeRate);
 
   return (
-    <div className="column flex-center">
+    <div className={styles.container}>
       <input
         type="text"
         className={styles.input}
