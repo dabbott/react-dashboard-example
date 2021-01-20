@@ -1,7 +1,8 @@
 {
   "name": "dashboard",
   "version": "0.0.1",
-  "description": "",
+  "homepage": "https://dabbott.github.io/react-dashboard-example/",
+  "description": "A React & TypeScript dashboard application",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
