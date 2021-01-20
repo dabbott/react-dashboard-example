@@ -1,16 +1,18 @@
 :root {
+  --font-family: Graphik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+
   --primary: rgb(22, 82, 240);
   --text: rgb(5, 15, 25);
   --text-muted: rgba(17, 51, 83, 0.6);
   --text-hint: rgba(17, 51, 83, 0.3);
   --divider: rgb(236, 239, 241);
   --background: rgb(255, 255, 255);
-  --font-family: Graphik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
 }
 
 .theme--dark {
+  --primary: rgb(22, 82, 240);
   --text: white;
   --text-muted: rgba(255, 255, 255, 0.85);
   --text-hint: rgba(255, 255, 255, 0.5);
