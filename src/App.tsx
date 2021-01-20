@@ -1,9 +1,8 @@
 import React, { memo, ReactNode, Suspense, useEffect, useState } from "react";
 import Article from "./components/Article";
 import Button from "./components/Button";
-import Currencies from "./components/Currencies";
 import ErrorBoundary from "./components/ErrorBoundary";
-import Feed from "./components/List";
+import List from "./components/List";
 import Info from "./components/Info";
 import { HorizontalSpacer, VerticalSpacer } from "./components/Spacer";
 import StarButton from "./components/StarButton";
@@ -13,15 +12,14 @@ import { ArticleResource, InfoResource } from "./resources";
 import { useResource } from "./utils/resource";
 import { darkTheme, lightTheme, ThemeContext } from "./utils/Theme";
 import styles from "./App.module.css";
+import * as api from "./api";
+import Block from "./components/Block";
 
-export const BASE_URL =
-  "https://my-json-server.typicode.com/dabbott/dashboard-json-server";
-
-function ArticleFeed() {
-  const articles = useResource<ArticleResource[]>(`${BASE_URL}/articles`);
+function ArticleList() {
+  const articles = useResource<ArticleResource[]>(api.articles());
 
   return (
-    <Feed>
+    <List>
       {articles.map((article) => (
         <Article
           key={article.id}
@@ -33,24 +31,24 @@ function ArticleFeed() {
           url={article.url}
         />
       ))}
-    </Feed>
+    </List>
   );
 }
 
 function HeroInfo() {
-  const info = useResource<InfoResource>(`${BASE_URL}/info/1`);
+  const info = useResource<InfoResource>(api.info(1));
 
   return <Info title={info.title} content={info.content} links={info.links} />;
 }
 
 function HeroTrade() {
-  const info = useResource<InfoResource>(`${BASE_URL}/info/1`);
+  const info = useResource<InfoResource>(api.info(1));
 
   return <Trade price={info.price} title={"Trade"} />;
 }
 
 function Fallback({ children }: { children: ReactNode }) {
-  return <div className="block">{children}</div>;
+  return <Block>{children}</Block>;
 }
 
 const Overview = memo(function Overview() {
@@ -62,12 +60,9 @@ const Overview = memo(function Overview() {
         <HeroTrade />
       </Suspense>
       <VerticalSpacer size={20} />
-      <Suspense fallback={<Fallback>Loading currency list</Fallback>}>
-        <Currencies />
-      </Suspense>
       <VerticalSpacer size={20} />
       <Suspense fallback={<Fallback>Loading articles</Fallback>}>
-        <ArticleFeed />
+        <ArticleList />
       </Suspense>
     </>
   );
@@ -96,15 +91,12 @@ export default function App() {
               Toggle theme
             </Button>
             <HorizontalSpacer size={20} />
-            <StarButton
-              activeTitle="Watch"
-              inactiveTitle="Unwatch"
-            ></StarButton>
+            <StarButton activeTitle="Watch" inactiveTitle="Unwatch" />
           </header>
           <Tabs
             tabs={[
               { title: "Overview", content: <Overview /> },
-              { title: "Prices", content: "Test content" },
+              { title: "Wallet", content: "Test content" },
               { title: "Vault", content: "Test content" },
             ]}
             selectedIndex={selectedIndex}

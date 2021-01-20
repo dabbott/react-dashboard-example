@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Block from "./Block";
 import Tabs from "./Tabs";
-import useConvertedValue from "../hooks/useConvertedValue";
+import useNumericValue from "../hooks/useNumericValue";
 import Button from "./Button";
 import { VerticalSpacer } from "./Spacer";
 import styles from "./Trade.module.css";
@@ -12,7 +12,7 @@ interface ConvertProps {
 }
 
 function Convert({ title, exchangeRate }: ConvertProps) {
-  const { amount, displayAmount, setAmount } = useConvertedValue(exchangeRate);
+  const { amount, displayAmount, setAmount } = useNumericValue(exchangeRate);
 
   return (
     <div className={styles.container}>
@@ -25,10 +25,10 @@ function Convert({ title, exchangeRate }: ConvertProps) {
           setAmount(event.target.value);
         }}
       ></input>
-      <p>You can {title.toLowerCase()} all the crypto</p>
+      <p>Enter an amount</p>
       <VerticalSpacer size={24} />
       <Button>
-        {title} {displayAmount}
+        {title} {displayAmount ? `${displayAmount} BTC` : ""}
       </Button>
     </div>
   );
@@ -45,6 +45,7 @@ export default function Trade({ title, price }: Props) {
   return (
     <Block>
       <h2>{title}</h2>
+      <VerticalSpacer size={12} />
       <Tabs
         tabs={[
           {
