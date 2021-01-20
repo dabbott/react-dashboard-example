@@ -6,7 +6,7 @@ interface Props {
 
 export function VerticalSpacer({ size }: Props) {
   const style =
-    typeof size === "undefined"
+    size === undefined
       ? { flex: 1, display: "block" }
       : { minHeight: size, display: "block" };
 
@@ -15,7 +15,7 @@ export function VerticalSpacer({ size }: Props) {
 
 export function HorizontalSpacer({ size }: Props) {
   const style =
-    typeof size === "undefined"
+    size === undefined
       ? { flex: 1, display: "block" }
       : { minWidth: size, display: "block" };
 
