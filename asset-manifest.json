@@ -1,22 +1,25 @@
 {
   "files": {
-    "main.css": "/react-dashboard-example/static/css/main.9fef5da9.chunk.css",
-    "main.js": "/react-dashboard-example/static/js/main.3bcf6cf3.chunk.js",
-    "main.js.map": "/react-dashboard-example/static/js/main.3bcf6cf3.chunk.js.map",
+    "main.css": "/react-dashboard-example/static/css/main.b12cccd2.chunk.css",
+    "main.js": "/react-dashboard-example/static/js/main.d844f58f.chunk.js",
+    "main.js.map": "/react-dashboard-example/static/js/main.d844f58f.chunk.js.map",
     "runtime-main.js": "/react-dashboard-example/static/js/runtime-main.02826a79.js",
     "runtime-main.js.map": "/react-dashboard-example/static/js/runtime-main.02826a79.js.map",
-    "static/js/2.04de9fd0.chunk.js": "/react-dashboard-example/static/js/2.04de9fd0.chunk.js",
-    "static/js/2.04de9fd0.chunk.js.map": "/react-dashboard-example/static/js/2.04de9fd0.chunk.js.map",
+    "static/css/2.117ce29f.chunk.css": "/react-dashboard-example/static/css/2.117ce29f.chunk.css",
+    "static/js/2.ad4c40b5.chunk.js": "/react-dashboard-example/static/js/2.ad4c40b5.chunk.js",
+    "static/js/2.ad4c40b5.chunk.js.map": "/react-dashboard-example/static/js/2.ad4c40b5.chunk.js.map",
     "index.html": "/react-dashboard-example/index.html",
-    "precache-manifest.e090ebf8b30eb547be756cdd013aeba5.js": "/react-dashboard-example/precache-manifest.e090ebf8b30eb547be756cdd013aeba5.js",
+    "precache-manifest.fabf6515b25156a4e43bbfa33d4cbcd2.js": "/react-dashboard-example/precache-manifest.fabf6515b25156a4e43bbfa33d4cbcd2.js",
     "service-worker.js": "/react-dashboard-example/service-worker.js",
-    "static/css/main.9fef5da9.chunk.css.map": "/react-dashboard-example/static/css/main.9fef5da9.chunk.css.map",
-    "static/js/2.04de9fd0.chunk.js.LICENSE.txt": "/react-dashboard-example/static/js/2.04de9fd0.chunk.js.LICENSE.txt"
+    "static/css/2.117ce29f.chunk.css.map": "/react-dashboard-example/static/css/2.117ce29f.chunk.css.map",
+    "static/css/main.b12cccd2.chunk.css.map": "/react-dashboard-example/static/css/main.b12cccd2.chunk.css.map",
+    "static/js/2.ad4c40b5.chunk.js.LICENSE.txt": "/react-dashboard-example/static/js/2.ad4c40b5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.02826a79.js",
-    "static/js/2.04de9fd0.chunk.js",
-    "static/css/main.9fef5da9.chunk.css",
-    "static/js/main.3bcf6cf3.chunk.js"
+    "static/css/2.117ce29f.chunk.css",
+    "static/js/2.ad4c40b5.chunk.js",
+    "static/css/main.b12cccd2.chunk.css",
+    "static/js/main.d844f58f.chunk.js"
   ]
 }
